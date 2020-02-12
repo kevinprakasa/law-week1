@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}, These are opening jobs in New York taken from github jobs
+  ol
+  each job in jobs
+    b Company name: #{job.company}
+    li= job.title
+    a(href=job.url) Click here to apply
+    br
+    br
