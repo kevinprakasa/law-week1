@@ -22,4 +22,13 @@ router.get("/", function(req, res, next) {
     }); /* GET home page. */
 });
 
+router.get("/multiply", function(req, res, next) {
+  const first = req.query.first;
+  const second = req.query.second;
+  res.render("index", {
+    title: `Multiply number between ${first} and ${second}`,
+    result: first * second
+  });
+});
+
 module.exports = router;
